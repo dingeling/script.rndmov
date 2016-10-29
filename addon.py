@@ -31,10 +31,10 @@ else:
   movie  = random.choice(movies['result']['movies'])
   time   = 10000
 
-  xbmc.executebuiltin('PlayMedia(%s)'%(movie['file']))
+  xbmc.executebuiltin('PlayMedia(%s)'%(movie['file'].encode('utf-8')))
 
   if (showMovieTitle == 'true'):
-    title = movie['label']
+    title = movie['label'].encode('utf-8')
   else:
     title = '????????';
 
